@@ -1,0 +1,23 @@
+.CustomYmapMarker-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.CustomYmapMarker-content img{
+    
+    height: 50px;
+}
+.CustomYmapMarker-content-price{
+    
+    background-color: rgba(34, 34, 34, 0.658);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(34, 34, 34, 0.897);
+}
+
+.CustomYmapMarker-content-icon{
+    width: 30px;
+}

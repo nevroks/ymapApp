@@ -1,0 +1,143 @@
+.Dropdown-wrapper {
+	display: flex;
+	align-items: start;
+	position: relative;
+	width: 100px;
+	height: 20px;
+}
+.isOpen{
+	height: 60px;
+}
+
+.DropdownMenuItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.DropdownMenuItem:hover {
+	background-color: #f0f0f0;
+}
+
+.DropdownMenuItem.selected {
+	background-color: #007bff;
+	color: white;
+}
+
+.selected{
+	color: #007bff;
+}
+
+/* <=====Dropdown button styles=====> */
+
+.DropdownButton {
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+}
+
+.DropdownButton-arrow {
+	transform: rotate(-90deg);
+	transition: all 0.3s;
+	justify-self: flex-end;
+}
+
+.DropdownButton.active .DropdownButton-arrow {
+	transform: rotate(90deg);
+}
+
+/* <=====Dropdown button styles=====> */
+
+/* <=====Dropdown menu styles=====> */
+.DropdownMenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	flex-direction: column;
+	z-index: 101;
+	width: 300px;
+	max-height: 50dvh;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(120, 120, 120, 0.2);
+	border-radius: 0.5rem;
+	overflow-y: auto;
+}
+
+/* Стилизация скроллбара для WebKit-браузеров (Chrome, Safari) */
+.DropdownMenu::-webkit-scrollbar {
+	width: 8px;
+	/* Ширина скроллбара */
+}
+
+.DropdownMenu::-webkit-scrollbar-track {
+	background: transparent;
+	/* Цвет фона трека */
+	border-radius: 10px;
+	/* Закругление углов трека */
+}
+
+.DropdownMenu::-webkit-scrollbar-thumb {
+	background: rgba(120, 120, 120, 0.5);
+	/* Цвет ползунка */
+	border-radius: 10px;
+	/* Закругление углов ползунка */
+}
+
+.DropdownMenu::-webkit-scrollbar-thumb:hover {
+	background: rgba(120, 120, 120, 0.8);
+	/* Цвет ползунка при наведении */
+}
+
+/* Стилизация скроллбара для Firefox */
+.DropdownMenu {
+	scrollbar-width: thin;
+	/* Установка ширины скроллбара */
+	scrollbar-color: rgba(120, 120, 120, 0.5) transparent;
+	/* Цвет ползунка и фона трека */
+}
+
+.DropdownMenu:hover {
+	scrollbar-color: rgba(120, 120, 120, 0.8) transparent;
+	/* Цвет ползунка при наведении */
+}
+
+.DropdownMenu.opened {
+	display: flex;
+	border-color: #007bff;
+}
+@media (max-width: 500px) {
+    .DropdownMenu {
+		width: 100%;
+		max-height: 40dvh;
+	}
+	.DropdownButton{
+		justify-content: space-between;
+		width: 100%;
+	}
+	.DropdownMenu {
+		display: none;
+		position: absolute;
+		top: 20px;
+		left: 0;
+		padding: 0;
+		margin: 0;
+		background-color: white;
+		box-shadow: none;
+		border-radius: 0.5rem;
+		overflow-y: auto;
+		max-height: 140px;
+	}
+	.DropdownButton-text{
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	
+}
+
+/* <=====Dropdown menu styles=====> */

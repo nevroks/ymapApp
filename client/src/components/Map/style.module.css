@@ -1,0 +1,30 @@
+.Map {
+    position: relative;
+    height: 100%;
+}
+
+.Map-showList {
+    position: absolute !important;
+    z-index: 100;
+    top: 20px;
+    left: 20px;
+}
+
+.Map-showList:active {
+    bottom: unset;
+}
+
+.Map-image-setings{
+    display: none;
+}
+@media(max-width: 500px) {
+    .Map-image-setings{
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        z-index: 100;
+        width: 35px;
+        cursor: pointer;
+    }
+}

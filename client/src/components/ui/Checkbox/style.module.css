@@ -1,0 +1,31 @@
+.checkbox {
+	position: relative;
+	appearance: none;
+	width: 28px;
+	height: 28px;
+	border-radius: 8px;
+	border: 2px solid rgb(0, 0, 0);
+}
+
+.checkbox::after {
+	position: absolute;
+	content: '';
+	background-color: rgb(52, 110, 196);
+	top: calc(100% / 2);
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 0px;
+	border-radius: 4px;
+	transition: all 0.4s;
+}
+
+.checkbox.checked::after {
+	position: absolute;
+	content: '';
+	background-color: rgb(52, 110, 196);
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+	top: 2px;
+	left: 2px;
+	border-radius: 4px;
+}

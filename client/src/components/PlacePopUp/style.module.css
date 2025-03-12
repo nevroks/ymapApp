@@ -1,0 +1,151 @@
+.PlacePopUp-content {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 15px 10px 25px 15px;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 26px 7px rgba(34, 60, 80, 0.23);
+    -moz-box-shadow: 0px 0px 26px 7px rgba(34, 60, 80, 0.23);
+    box-shadow: 0px 0px 26px 7px rgba(34, 60, 80, 0.23);
+}
+
+.PlacePopUp-header {
+    position: relative;
+    margin-bottom: 10px;
+}
+.PlacePopUp-header img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.PlacePopUp-body {
+    display: grid;
+    grid-template-columns: 59% 40%;
+    column-gap: 30px;
+}
+
+.PlacePopUp-body-preview-images-current {
+    display: flex;
+    justify-content: flex-start;
+    height: 550px;
+}
+
+.PlacePopUp-body-preview-images-current img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.PlacePopUp-body-preview-images {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.PlacePopUp-body-preview-images.empty {
+    background-color: #b6b6b677;
+    height: 550px;
+    width: 100%;
+}
+
+.PlacePopUp-body-preview-images-list {
+    display: flex;
+    column-gap: 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    /* Для Firefox */
+    scrollbar-color: #888 #f1f1f1;
+    /* Цвет скролла для Firefox */
+}
+
+.PlacePopUp-body-preview-images-list::-webkit-scrollbar {
+    height: 8px;
+    /* Высота скролла */
+}
+
+.PlacePopUp-body-preview-images-list::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Цвет ползунка */
+    border-radius: 10px;
+    /* Закругление углов ползунка */
+}
+
+.PlacePopUp-body-preview-images-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Цвет фона скролла */
+    border-radius: 10px;
+    /* Закругление углов фона */
+}
+
+.PlacePopUp-body-preview-images-list-item {
+    width: 135px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.PlacePopUp-body-preview-images-list-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.PlacePopUp-body-preview-images-list-item.selected {
+    border: 2px solid var(--accent-color);
+}
+
+.PlacePopUp-body-description {
+    overflow-y: auto;
+    max-height: 65dvh;
+    max-width: 98.8%;
+}
+
+.PlacePopUp-body-description::-webkit-scrollbar {
+    
+    width: 8px;
+    /* Ширина вертикального скроллбара */
+    height: 8px;
+    /* Высота горизонтального скроллбара */
+}
+
+/* Фон скроллбара */
+.PlacePopUp-body-description::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Цвет фона трека */
+    border-radius: 10px;
+    /* Закругление углов трека */
+}
+
+/* Ползунок скроллбара */
+.PlacePopUp-body-description::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Цвет ползунка */
+    border-radius: 10px;
+    /* Закругление углов ползунка */
+}
+
+/* Ползунок при наведении */
+.PlacePopUp-body-description::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Цвет ползунка при наведении */
+}
+
+/* Убираем стрелочки */
+.PlacePopUp-body-description::-webkit-scrollbar-button {
+    display: none;
+    /* Скрываем стрелочки */
+}
+
+.PlacePopUp-body-description-text {
+    line-height: 220%;
+}
+
+.PlacePopUp-body-description-more li:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+.PlacePopUp-body-description-more li {
+    margin-bottom: 10px;
+}

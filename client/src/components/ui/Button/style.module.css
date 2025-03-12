@@ -1,0 +1,20 @@
+.defaultBtnClass {
+    position: relative;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.defaultBtnClass:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.defaultBtnClass:active {
+    background-color: var(--accent-darkest-color);
+    bottom: -2px;
+
+}

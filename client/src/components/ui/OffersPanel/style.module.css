@@ -1,0 +1,315 @@
+
+.CustomYmapClusterMarker-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-image: url('../../assets/icons/marker.svg');
+    background-repeat: no-repeat;
+}
+.CustomYmapClusterMarker-content-active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-image: url('../../assets/icons/markerRed.svg');
+    background-repeat: no-repeat;
+}
+
+.CustomYmapClusterMarker-content:hover {
+    background-color: inherit !important;
+}
+
+.CustomYmapClusterMarker-content:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-darkest-color);
+}
+
+
+.CustomYmapClusterMarker-popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 26px 7px rgba(34, 60, 80, 0.23);
+    -moz-box-shadow: 0px 0px 26px 7px rgba(34, 60, 80, 0.23);
+    box-shadow: 0px 0px 26px 7px rgba(34, 60, 80, 0.23);
+}
+
+.CustomYmapClusterMarker-popup-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.CustomYmapClusterMarker-popup-header img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.CustomYmapClusterMarker-popup-offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.CustomYmapClusterMarker-popup-offers-offer {
+    max-width: 375px;
+}
+
+.CustomYmapClusterMarker-popup-offers-offer-image {
+    width: 100%;
+    height: 200px;
+}
+
+.CustomYmapClusterMarker-popup-offers-offer-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.CustomYmapClusterMarker-popup-offers-offer-image-empty {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(175, 175, 175);
+}
+
+.CustomYmapClusterMarker-popup-offers-offer-info {
+    margin-top: 10px;
+}
+
+.CustomYmapClusterMarker-popup-offers-offer-info-name {
+    margin-bottom: 10px;
+}
+
+.CustomYmapClusterMarker-popup-offers-offer-info-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CustomYmapClusterMarker-popup-pagination {
+    display: flex;
+    justify-content: center;
+    column-gap: 4px;
+}
+
+.CustomYmapClusterMarker-popup-pagination-button {
+    padding: 2px 4px;
+    transition: all 0.3s ease;
+}
+
+.CustomYmapClusterMarker-popup-pagination-button.active {
+    background-color: var(--accent-darkest-color);
+    color: white;
+}
+
+
+.CustomYmapClusterMarker-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.CustomYmapClusterMarker-panel {
+    position: fixed;
+    top: 97px;
+    left: 0;
+    width: 300px; 
+    height: 100%;
+    background-color: white;
+    /* box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2); */
+    z-index: 1001;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.CustomYmapClusterMarker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.CustomYmapClusterMarker-offers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.CustomYmapClusterMarker-offer {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.CustomYmapClusterMarker-offer-image-container {
+    width: 250px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.CustomYmapClusterMarker-offer-image-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* .CustomYmapClusterMarker-slider {
+    margin-bottom: 10px;
+} */
+.CustomYmapClusterMarker-header-title{
+    overflow: hidden;
+}
+.CustomYmapClusterMarker-slider :global(.slick-prev){
+left: 5px !important;
+z-index: 10 !important  ;
+}
+.CustomYmapClusterMarker-slider :global(.slick-next) {
+right: 15px !important;
+}
+.CustomYmapClusterMarker-offer-image {
+    width: 250px;
+    height: 115px;
+    border-radius: 8px;
+}
+
+.CustomYmapClusterMarker-offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.CustomYmapClusterMarker-offer-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.CustomYmapClusterMarker-offer-link {
+    text-decoration: none; 
+    color: inherit !important; 
+    cursor: pointer;
+}
+.CustomYmapClusterMarker-offer-link:visited {
+    text-decoration: none; 
+    color: inherit !important; 
+    cursor: pointer;
+}
+.CustomYmapClusterMarker-offer-link:hover {
+    text-decoration: none; 
+    color: inherit !important; 
+    cursor: pointer;
+}
+.CustomYmapClusterMarker-offer-link:active {
+    text-decoration: none; 
+    color: inherit !important; 
+    cursor: pointer;
+}
+
+.CustomYmapClusterMarker-offer-link p {
+    margin: 0; 
+    padding: 0; 
+}
+
+
+
+.CustomYmapClusterMarker-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.CustomYmapClusterMarker-pagination-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.CustomYmapClusterMarker-pagination-button.active {
+    background-color: #007bff;
+    color: white;
+}
+.CustomYmapClusterMarker-header img{
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+.CustomYmapClusterMarker-offer-pricePerMeter{
+    margin: 0 0 5px 0;
+}
+
+@media (max-width: 950px) {
+    .CustomYmapClusterMarker-panel {
+        position: fixed;
+        top: 69px;
+        left: 0;
+        width: 300px; 
+        height: 100%;
+        background-color: white;
+        z-index: 1001;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+}
+@media (max-width: 600px) {
+    .CustomYmapClusterMarker-popup-offers-offer-info-price {
+        flex-direction: column;
+        row-gap: 4px;
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .CustomYmapClusterMarker-popup-pagination-button:hover {
+        background-color: var(--accent-darkest-color);
+        color: white;
+    }
+}
+
+@media (max-width: 500px) {
+    .CustomYmapClusterMarker-popup-offers {
+        grid-template-columns: 1fr;
+    }
+
+}

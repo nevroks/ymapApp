@@ -1,0 +1,5 @@
+@media(max-width: 500px) {
+   .NumberInput{
+    width: 120px;
+   } 
+}
