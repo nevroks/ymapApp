@@ -13,7 +13,7 @@ type PopOverProps = HTMLMotionProps<'div'> & {
 const PopOver = ({ children, className, popOverAnchorRef, isOpened, setIsOpened, offset = { top: 0, left: 0 }, ...rest }: PopOverProps) => {
 
     const popOverRef = useRef<HTMLDivElement | null>(null)
-    const [popOverPosition, setPopOverPosition] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
+    const [_popOverPosition, setPopOverPosition] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
 
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -42,7 +42,7 @@ const PopOver = ({ children, className, popOverAnchorRef, isOpened, setIsOpened,
     useEffect(() => {
         if (isOpened && popOverAnchorRef.current && popOverRef.current) {
             const anchorRect = popOverAnchorRef.current.getBoundingClientRect();
-            const popOverRect = popOverRef.current.getBoundingClientRect();
+            // const popOverRect = popOverRef.current.getBoundingClientRect();
 
             // Вычисляем позицию поповера
             const top = anchorRect.bottom + offset.top; // Располагаем поповер под анкором

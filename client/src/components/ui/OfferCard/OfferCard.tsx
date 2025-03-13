@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import { YMapMarker } from "ymap3-components";
-
 import { useState } from "react";
 import styles from "./style.module.css"
 import classNames from "classnames";

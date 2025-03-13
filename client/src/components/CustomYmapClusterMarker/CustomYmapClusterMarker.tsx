@@ -24,9 +24,9 @@ const CustomYmapClusterMarker = ({ coordinates, placeMarks, onMarkerClick, isAct
     const [isPopUpOpen, setIsPopUpOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
 
-    const handlePlaceMarkClick = (_placeMark: ReturningOfferType) => {
-        setIsPopUpOpen(false);
-    };
+    // const handlePlaceMarkClick = (_placeMark: ReturningOfferType) => {
+    //     setIsPopUpOpen(false);
+    // };
 
     const offersPerPage = isMobile ? 1 : 2;
     const pages = Math.ceil(placeMarks.length / offersPerPage);
