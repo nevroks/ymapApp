@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "src", // Указывает базовую директорию для разрешения путей
+    "paths": {
+      "@routes/*": ["routes/*"],
+    },
     "target": "ES6",
     "module": "commonjs",
     "strict": true,
